@@ -51,6 +51,18 @@ h1, h2, h3, p{
 	text-align: center;
 }
 
+svg {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -106,6 +118,95 @@ main{
 h2{
 	font-size: 1.5em;
 	margin: 0.5em 0;
+}
+
+form{
+	width: 90%;
+	max-width: 350px;
+	margin:  2em auto;
+	padding:  0.75em;
+	border: 2px solid #777;
+	border-radius: 0.2em;
+}
+
+input, label, textarea{
+	display: block;
+	width: calc(100% - 2em);
+}
+
+input, textarea, select{
+	outline: 1px solid #222;
+	border: none;
+	border-radius: 0.2em;
+}
+
+label{
+	font-size: 1.1em;
+}
+
+.required{
+	color: #c71819;
+}
+
+input{
+	width: 90%;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+}
+
+input:focus, select:focus, textarea:focus{
+	border: 2px inset #0a58ff;
+	box-shadow: 0 0 0 0.09em currentColor;
+}
+
+input:error, select:error, textarea:error{
+	background-color: #c71819;
+}
+
+fieldset{
+	margin: 0.5em auto;
+	padding-bottom: 0.5em;
+	width: 94%;
+	border: 1px solid #222;
+	border-radius: 0.2em;
+	display: grid;
+	grid-template-columns: 30px 1fr 30px 1fr;
+}
+
+legend{
+	padding: 0.5em;
+}
+
+fieldset label{
+	display: inline;
+	width: 60%;
+}
+
+fieldset input{
+	display: inline;
+	width: 20px;
+}
+
+select{
+	display: block;
+	width: 95%;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+textarea{
+	width: 90%;
+	height: 100px;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+}
+
+input[type="radio"]{
+	margin-top: 0.4em;
+	outline: none;
+	border: 1px solid #222;
+	border-radius: 25%;
 }
 
  @media screen and (max-width:1263px) {
