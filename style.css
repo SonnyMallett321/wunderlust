@@ -1,3 +1,6 @@
+/* Sonny Mallett */
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -57,19 +60,20 @@ article {
 }
 
 
-.skip-to-content-link {
-    height: 30px;
-    left: 50%;
-    padding: 8px;
-    position: absolute;
-    transform: translateY(-170%);
-    transition : transform 0.3s;
-   }
-   
-   
-   .skip-to-content-link:focus {
-     transform: translateY(0%);
-   }
+.skip {
+  background: #e77e23;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-170%);
+  transition : transform 0.3s;
+ }
+ 
+ 
+.skip:focus {
+   transform: translateY(0%);
+ }
 
 a:focus{
     border: 2px solid #0a58ff;
@@ -85,18 +89,19 @@ header{
     border-bottom: 5px solid #0a58ff;
 }
 
-h1, h2, h3, p{
-    font-family: sans-serif;
+h1, h2, h3 {
+  font-family: 'Molle', cursive;
+  font-style: italic;
 	font-weight: bold;
 	line-height: 1.2;
 	text-align: center;
 }
 
-q {
-    font-family: sans-serif;
+q, p, label, h4{
+  font-family: 'Montserrat';
 	font-weight: bold;
 	line-height: 1.2;
-	text-align: center;  
+	text-align: center;
 }
 
 svg {
@@ -114,6 +119,8 @@ a {
 img {
   display: block;
   margin: auto;
+  background-color: #55BCD5;
+  border: white;
 }
 
 h1{
@@ -153,6 +160,17 @@ main{
 h2{
 	font-size: 1.5em;
 	margin: 0.5em 0;
+}
+
+footer {
+  display: block;
+  padding: 2em 0 1em 0;
+}
+
+footer a {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* at the end*/
@@ -245,82 +263,54 @@ input[type="radio"]{
 	border-radius: 25%;
 }
 
- @media screen and (max-width:1263px) {
-  main {
-    grid-template-columns: 1fr 1fr;
+
+@media (min-width: 600px) {
+
+  main{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 1em 0;
   }
-   p {
-    min-height:125px;
+
+  section{
+      margin: 0;
   }
-}
-@media screen and (max-width:900px) {
-  header {
-    grid-template-columns:2fr 1fr;
-  }
-  main {
-    grid-template-columns: 1fr;
-  }
-  p {
-    min-height:auto;
-  }
-  nav h2 {
-    visibility:visible;
-    height:auto;
-    background-color: #000000;
-    border:2px solid #ffffff;
-    color: white;
-    width: 150px;
-    cursor: pointer;
-  }
-  nav {
-    position: relative;
-    display: inline-block;
-    top:25px;
-  }
-  nav ul {
-    display: none;
-    position: absolute;
-    background-color: rgba(0,0,0,.85);
-    width:150px;
-    z-index: 1;
-  }
-  nav a {
-    color: #ffffff;
-    visibility: visible;
-    display:block;
-    text-align:center;
-  }
-  nav li {
-    border-bottom:1px solid #ffffff;
-  }
-  nav:hover ul {
-    display: block;
-  }
-}
-@media screen and (max-width:480px) {
-  header {
-    grid-template-columns: 1fr;
-    height:250px;
-  }
-  h1, nav {
-    margin:0 auto;
-    text-align:center;
-  }
-  h1 {
-    padding-top:25px;
-  }
-  nav h2, nav, nav ul {
-    border:none;
-    width:100%;
-  }
-  nav h2 {
-    background-color:#F7CE3E;
-    color:#000000;
-  }
-  nav h2:hover {
-    background-color:#000000;
-    color:#ffffff;
-    border:2px solid #F7CE3E;
+
+  img{
+      width: 350px;
+      max-width: 450px;
   }
 }
 
+
+@media (min-width: 768px) {
+  main{
+      grid-template-columns: 1fr
+  }
+
+  section{
+    margin: 0;
+  }
+
+  img{
+    width: 450px;
+    max-width: 550px;
+  }
+}
+
+
+  @media (min-width: 899px) {
+    section{
+        background-color: var(--blue);
+    }
+    img{
+      width: 350px;
+      max-width: 550px;
+    }
+  }
+
+@media (min-width: 1200px) {
+  main{
+      margin: 1em auto;
+  }
+}
