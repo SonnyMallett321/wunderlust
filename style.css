@@ -61,7 +61,6 @@ article {
 
 
 .skip {
-  background: #e77e23;
   height: 30px;
   left: 50%;
   padding: 8px;
@@ -87,6 +86,8 @@ a:hover{
 header{
     padding: 2em 0 1em 0;
     border-bottom: 5px solid #0a58ff;
+	background-color: #FFFFFF;
+  	background-image: linear-gradient(180deg, #55BCD5, #FFFFFF);
 }
 
 h1, h2, h3 {
@@ -140,6 +141,14 @@ ul li{
 	display: inline-block;
 }
 
+#plan {
+	background-color: #F6D64A;
+}
+
+#about {
+	background-color: #499BD2;
+}
+
 nav a{
 	display: block;
 	padding: 1em;
@@ -165,6 +174,7 @@ h2{
 footer {
   display: block;
   padding: 2em 0 1em 0;
+  background-color: #EAEAEA;
 }
 
 footer a {
@@ -300,17 +310,26 @@ input[type="radio"]{
 
 
   @media (min-width: 899px) {
-    section{
-        background-color: var(--blue);
-    }
     img{
       width: 350px;
       max-width: 550px;
     }
+	
   }
 
 @media (min-width: 1200px) {
   main{
       margin: 1em auto;
   }
+  .img-grid {
+	display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  }
+
+  #logo {
+	position: relative;
+   top: -16px;
+   left: -706px;
+}
 }
